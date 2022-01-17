@@ -2,3 +2,11 @@
 	path = spark-sql-perf
 	url = https://github.com/databricks/spark-sql-perf.git
 	branch = master
+[submodule "tpch-dbgen"]
+	path = tpch-dbgen
+	url = https://github.com/databricks/tpch-dbgen.git
+	branch = master
+[submodule "tpcds-kit"]
+	path = tpcds-kit
+	url = https://github.com/databricks/tpcds-kit.git
+	branch = master
