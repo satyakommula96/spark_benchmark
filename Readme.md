@@ -13,6 +13,9 @@
 4. [Performance Benchmarking](#4-performance-benchmarking)
     - [TPCH](#41-tpch)
     - [TPCDS](#42-tpcds)
+5. [Reports](#5-performance-reports)
+     - [TPCH](#51-tpch-reports)
+     - [TPCDS](#52-tpcds-reports)
 
 ## 1. Clone submodules
 
@@ -96,4 +99,17 @@ cd ../tpcds
 # For runing all 99 TPC-DS Queries
 ./runtpch.sh
 ```
+## 5. Reports
 
+### 5.1 TPCH
+
+```bash
+cd tpch/tpch_reports
+# result will be present in part*.csv file
+```
+
+### 5.2 TPCDS
+```bash
+cd tpcds/tpcds_reports
+# result will be present in part*.csv file
+```
