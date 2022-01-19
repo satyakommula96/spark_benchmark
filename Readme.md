@@ -103,14 +103,12 @@ cd ../tpcds
 ## 5. Reports
 
 ### 5.1 TPCH Report
-
 ```bash
 cd tpch/tpch_reports
 # result will be present in part*.csv file
 ```
 
 ### 5.2 TPCDS Report
-
 ```bash
 cd tpcds/tpcds_reports
 # result will be present in part*.csv file
