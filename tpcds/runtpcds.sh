@@ -3,6 +3,6 @@
 	    --packages io.delta:delta-core_2.12:1.1.0 \
 	    --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" \
 	    --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" \
-            --master spark://localhost:7077 \
+            --master spark://127.0.1.1:7077 \
             --deploy-mode client \
             -i ./TPCDS_2_4_Queries.scala

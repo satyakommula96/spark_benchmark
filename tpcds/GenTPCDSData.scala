@@ -11,7 +11,7 @@ val rootDir = "./parquet" // root directory of location to create data in.
 val databaseName = "tpcds" // name of database to create.
 val scaleFactor = "100" // scaleFactor defines the size of the dataset to generate (in GB).
 val format = "parquet" // valid spark format like parquet "parquet".
-val dsdgen = "../tpcds-kit/tools", // location of dsdgen
+val dsdgen = "../tpcds-kit/tools" // location of dsdgen
 // Run:
 val tables = new TPCDSTables(sqlContext,
     dsdgenDir = dsdgen,
