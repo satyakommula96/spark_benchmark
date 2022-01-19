@@ -14,8 +14,8 @@
     - [TPCH](#41-tpch)
     - [TPCDS](#42-tpcds)
 5. [Reports](#5-performance-reports)
-     - [TPCH](#51-tpch-reports)
-     - [TPCDS](#52-tpcds-reports)
+     - [TPCH Report](#51-tpch-reports)
+     - [TPCDS Report](#52-tpcds-reports)
 
 ## 1. Clone submodules
 
@@ -102,14 +102,14 @@ cd ../tpcds
 
 ## 5. Reports
 
-### 5.1 TPCH
+### 5.1 TPCH Report
 
 ```bash
 cd tpch/tpch_reports
 # result will be present in part*.csv file
 ```
 
-### 5.2 TPCDS
+### 5.2 TPCDS Report
 
 ```bash
 cd tpcds/tpcds_reports
