@@ -56,6 +56,7 @@ make OS=LINUX
 
 ```bash
 cd ../../tpch-dbgen
+git checkout 0469309147b42abac8857fa61b4cf69a6d3128a8 -- bm_utils.c
 make
 ```
 **NOTE:** This should be installed on all cluster nodes with the same location and build `tpcds-kit`, `tpch-dbgen`
