@@ -63,6 +63,8 @@ make
 
 ## Run Benchmark
 
+**NOTE:** Change `executor-memory` , `num-executors`,`executor-cores` a/c to your machine specifications in `.sh` files.
+
 ### TPCH
 ```bash
 cd ../tpch

@@ -5,4 +5,7 @@
 	    --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog" \
             --master spark://127.0.1.1:7077 \
             --deploy-mode client \
+	    --executor-memory 8G \
+	    --num-executors 4 \
+ 	    --executor-cores 2 \
             -i ./TPCDS_2_4_Queries.scala
