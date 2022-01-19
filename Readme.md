@@ -101,7 +101,6 @@ cd ../tpcds
 ```
 
 ## 5. Reports
-
 ### 5.1 TPCH Report
 ```bash
 cd tpch/tpch_reports
