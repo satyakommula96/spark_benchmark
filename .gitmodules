@@ -1,7 +1,3 @@
-[submodule "spark-sql-perf"]
-	path = spark-sql-perf
-	url = https://github.com/databricks/spark-sql-perf.git
-	branch = master
 [submodule "tpch-dbgen"]
 	path = tpch-dbgen
 	url = https://github.com/databricks/tpch-dbgen.git
