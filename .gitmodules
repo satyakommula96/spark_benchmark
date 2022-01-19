@@ -6,3 +6,7 @@
 	path = tpcds-kit
 	url = https://github.com/databricks/tpcds-kit.git
 	branch = master
+[submodule "spark-sql-perf"]
+	path = spark-sql-perf
+	url = https://github.com/skommula96/spark-sql-perf.git
+	branch = master
