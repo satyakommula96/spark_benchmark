@@ -40,3 +40,6 @@ tables.createExternalTables(rootDir, "parquet", databaseName, overwrite = true, 
  
 // For CBO only, gather statistics on all columns:
 tables.analyzeTables(databaseName, analyzeColumns = true) 
+
+//exit
+sys.exit(0)

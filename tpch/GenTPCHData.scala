@@ -32,3 +32,6 @@ sql(s"create database if not exists $databaseName")
 tpch_tables.createExternalTables(rootDir, "parquet", databaseName, overwrite = true, discoverPartitions = true)
 
 tpch_tables.analyzeTables(databaseName, analyzeColumns = true)  
+
+//exit
+sys.exit(0)

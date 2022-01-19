@@ -24,3 +24,5 @@ experiment.waitForFinish(timeout)
 experiment.getCurrentResults.createOrReplaceTempView("result") 
 spark.sql("select substring(name,1,100) as Name, bround((parsingTime+analysisTime+optimizationTime+planningTime+executionTime)/1000.0,1) as Runtime_sec  from result").show(105,false)
 
+//exit
+sys.exit(0)
