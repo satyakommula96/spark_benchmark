@@ -3,19 +3,19 @@
 ## Table of Contents :clipboard:
 1. [Clone submodules](#1-clone-submodules)
 2. [Prerequisites](#2-prerequisites)
-     - [Install Dependencies](#21-install-dependencies)
-     - [Download spark](#22-download-spark)
-     - [Download sbt launcher](#23-download-sbt-launcher)
+    - [Install Dependencies](#21-install-dependencies)
+    - [Download spark](#22-download-spark)
+    - [Download sbt launcher](#23-download-sbt-launcher)
 3. [Build](#3-build)
-     - [spark-sql-perf](#31-spark-sql-perf)
-     - [tpcds-kit](#32-tpcds-kit)
-     - [tpch-dbgen](#33-tpch-dbgen)
+    - [spark-sql-perf](#31-spark-sql-perf)
+    - [tpcds-kit](#32-tpcds-kit)
+    - [tpch-dbgen](#33-tpch-dbgen)
 4. [Performance Benchmarking](#4-performance-benchmarking)
     - [TPCH](#41-tpch)
     - [TPCDS](#42-tpcds)
 5. [Reports](#5-performance-reports)
-     - [TPCH Report](#51-tpch-reports)
-     - [TPCDS Report](#52-tpcds-reports)
+    - [TPCH Report](#51-tpch-reports)
+    - [TPCDS Report](#52-tpcds-reports)
 
 ## 1. Clone submodules
 
