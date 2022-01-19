@@ -99,6 +99,7 @@ cd ../tpcds
 # For runing all 99 TPC-DS Queries
 ./runtpch.sh
 ```
+
 ## 5. Reports
 
 ### 5.1 TPCH
@@ -109,6 +110,7 @@ cd tpch/tpch_reports
 ```
 
 ### 5.2 TPCDS
+
 ```bash
 cd tpcds/tpcds_reports
 # result will be present in part*.csv file
