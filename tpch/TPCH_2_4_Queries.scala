@@ -20,7 +20,7 @@ val iterations = 1 // how many iterations of queries to run.
 val queries = (1 to 22).map { q =>
   val queryContent: String = IOUtils.toString(
     getClass().getClassLoader().getResourceAsStream(s"tpch/queries/$q.sql"))
-  new Query(s"Q$q", spark.sqlContext.sql(queryContent), description = s"TPCH Query $q",
+  new Query(s"Q$q-v2.4", spark.sqlContext.sql(queryContent), description = s"TPCH Query $q",
     executionMode = CollectResults)
 }
 
