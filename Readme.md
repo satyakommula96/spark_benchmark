@@ -13,7 +13,7 @@
 4. [Performance Benchmarking](#4-performance-benchmarking)
     - [TPCH](#41-tpch)
     - [TPCDS](#42-tpcds)
-5. [Reports](#5-performance-reports)
+5. [Reports](#5-reports)
     - [TPCH Report](#51-tpch-reports)
     - [TPCDS Report](#52-tpcds-reports)
 
@@ -102,13 +102,14 @@ cd ../tpcds
 ```
 
 ## 5. Reports
-### 5.1 TPCH Report
+
+### 5.1 TPCH reports
 ```bash
 cd tpch/tpch_reports
 # result will be present in part*.csv file
 ```
 
-### 5.2 TPCDS Report
+### 5.2 TPCDS reports
 ```bash
 cd tpcds/tpcds_reports
 # result will be present in part*.csv file
