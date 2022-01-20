@@ -40,7 +40,8 @@ sdk install sbt 0.13.18
 
 ```bash
 wget https://archive.apache.org/dist/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz
-tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
+mkdir spark3
+tar -xzf spark-3.2.0-bin-hadoop3.2.tgz --strip 1 -C spark3
 ```
 **NOTE:** Deploy spark in standalone cluster mode. 
 

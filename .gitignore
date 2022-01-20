@@ -18,7 +18,7 @@ tpch/tpch_reports/_SUCCESS
 tpch/tpch_reports/.*
 
 
-spark-*bin-hadoop*
+spark3
 *.tgz
 
 # Object files
