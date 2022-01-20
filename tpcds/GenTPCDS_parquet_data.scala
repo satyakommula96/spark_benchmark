@@ -8,7 +8,7 @@ val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 // Note: If you are using HDFS, the format should be like "hdfs://namenode:9000/tpcds"
 val rootDir = "./parquet" // root directory of location to create data in.
  
-val databaseName = "tpcds" // name of database to create.
+val databaseName = "tpcds_parquet" // name of database to create.
 val scaleFactor = "100" // scaleFactor defines the size of the dataset to generate (in GB).
 val format = "parquet" // valid spark format like parquet "parquet".
 val absolutePath = new java.io.File("../").getCanonicalPath //get absolute path
@@ -36,7 +36,7 @@ tables.genData(
 sql(s"create database if not exists $databaseName")
 // Create metastore tables in a specified database for your data.
 // Once tables are created, the current database will be switched to the specified database.
-tables.createExternalTables(rootDir, "parquet", databaseName, overwrite = true, discoverPartitions = true)
+tables.createExternalTables(rootDir, format, databaseName, overwrite = true, discoverPartitions = true)
 // Or, if you want to create temporary tables
 // tables.createTemporaryTables(location, format)
  

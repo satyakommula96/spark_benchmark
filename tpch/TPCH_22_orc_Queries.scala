@@ -11,9 +11,9 @@ val sqlContext = new org.apache.spark.sql.SQLContext(sc)
  
 val tpch = new TPCH (sqlContext = sqlContext)
 // Set:
-val databaseName = "tpch" // name of database with TPCDS data.
+val databaseName = "tpch_orc" // name of database with TPCDS data.
 sql(s"use $databaseName")
-val resultLocation = "/tmp/tpch_results" // place to write results
+val resultLocation = "/tmp/tpch_orc_results" // place to write results
 val iterations = 1 // how many iterations of queries to run.
 
   
@@ -35,5 +35,5 @@ val experiment = tpch.runExperiment(
 experiment.waitForFinish(timeout)
 experiment.getCurrentResults.createOrReplaceTempView("result")
 val  results = spark.sql("select substring(name,1,100) as Name, bround((parsingTime+analysisTime+optimizationTime+planningTime+executionTime)/1000.0,1) as Runtime_sec  from result")
-results.coalesce(1).write.format("com.databricks.spark.csv").mode("overwrite").option("header", "true").save("./tpch_reports")
+results.coalesce(1).write.format("com.databricks.spark.csv").mode("overwrite").option("header", "true").save("./tpch_orc_reports")
 sys.exit(0)

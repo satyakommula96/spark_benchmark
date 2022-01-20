@@ -4,18 +4,20 @@
 
 tpcds/metastore_db
 tpcds/parquet/*
+tpcds/csv/*
+tpcds/orc/*
 tpcds/spark-warehouse
 tpcds/derby.log
-tpcds/tpcds_reports/_SUCCESS
-tpcds/tpcds_reports/.*
+tpcds/tpcds_*_reports/*
 
 
 tpch/metastore_db
 tpch/parquet/*
+tpch/orc/*
+tpch/csv/*
 tpch/spark-warehouse
 tpch/derby.log
-tpch/tpch_reports/_SUCCESS
-tpch/tpch_reports/.*
+tpch/tpch_*_reports/*
 
 
 spark3
@@ -24,7 +26,7 @@ spark3
 # Object files
 tpch-dbgen/*.o
 tpch-dbgen/qgen
-tpchh-dbgen/dbgen
+tpch-dbgen/dbgen
 
 
 # Libraries

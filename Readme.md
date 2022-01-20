@@ -12,7 +12,13 @@
     - [tpch-dbgen](#33-tpch-dbgen)
 4. [Performance Benchmarking](#4-performance-benchmarking)
     - [TPCH](#41-tpch)
+        - [Parquet](#411-parquet)
+        - [ORC](#412-orc)
+        - [CSV](#413-csv)
     - [TPCDS](#42-tpcds)
+        - [Parquet](#421-parquet)
+        - [ORC](#422-orc)
+        - [CSV](#423-csv)
 5. [Reports](#5-reports)
     - [TPCH Report](#51-tpch-reports)
     - [TPCDS Report](#52-tpcds-reports)
@@ -84,33 +90,70 @@ make
 **NOTE:** Change `executor-memory` , `num-executors`,`executor-cores` a/c to your machine specifications in `.sh` files.
 
 ### 4.1 TPCH
+
+#### 4.1.1 Parquet
 ```bash
 cd ../tpch
 #For generating ~100GB parquet data
-./gendata.sh
+./gendata_parquet.sh
 # For runing all 22 TPC-H Queries
-./runtpch.sh
+./runtpch_parquet.sh
+```
+#### 4.1.2 ORC
+```bash
+cd ../tpch
+#For generating ~100GB orc data
+./gendata_orc.sh
+# For runing all 22 TPC-H Queries
+./runtpch_orc.sh
+```
+#### 4.1.3 CSV
+```bash
+cd ../tpch
+#For generating ~100GB csv data
+./gendata_csv.sh
+# For runing all 22 TPC-H Queries
+./runtpch_csv.sh
 ```
 
+
 ### 4.2 TPCDS
+
+#### 4.2.1 Parquet
 ```bash
 cd ../tpcds
 #For generating ~100GB parquet data
-./gendata.sh
+./gendata_parquet.sh
 # For runing all 99 TPC-DS Queries
-./runtpch.sh
+./runtpch_parquet.sh
+```
+#### 4.2.2 ORC
+```bash
+cd ../tpcds
+#For generating ~100GB orc data
+./gendata_orc.sh
+# For runing all 99 TPC-DS Queries
+./runtpch_orc.sh
+```
+#### 4.2.3 CSV
+```bash
+cd ../tpcds
+#For generating ~100GB csv data
+./gendata_csv.sh
+# For runing all 99 TPC-DS Queries
+./runtpch_csv.sh
 ```
 
 ## 5. Reports
 
 ### 5.1 TPCH reports
 ```bash
-cd tpch/tpch_reports
+cd tpch/tpch_<parquet,orc,csv>_reports
 # result will be present in part*.csv file
 ```
 
 ### 5.2 TPCDS reports
 ```bash
-cd tpcds/tpcds_reports
+cd tpcds/tpcds_<parquet,orc,csv>_reports
 # result will be present in part*.csv file
 ```

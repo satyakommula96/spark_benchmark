@@ -1,4 +1,4 @@
-rm -rf metastore_ddb
+rm -rf metastore_db
 rm derby.log
 
 ../spark3/bin/spark-shell \
@@ -8,4 +8,4 @@ rm derby.log
 	--executor-memory 4G \
 	--num-executors 4 \
 	--executor-cores 2 \
-	-i ./GenTPCHData.scala
+	-i ./GenTPCDS_parquet_data.scala
