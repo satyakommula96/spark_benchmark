@@ -1,0 +1,43 @@
+# OS X
+.DS_Store
+
+
+tpcds/metastore_db
+tpcds/parquet/*
+tpcds/spark-warehouse
+tpcds/derby.log
+tpcds/tpcds_reports/_SUCCESS
+tpcds/tpcds_reports/.*
+
+
+tpch/metastore_db
+tpch/parquet/*
+tpch/spark-warehouse
+tpch/derby.log
+tpch/tpch_reports/_SUCCESS
+tpch/tpch_reports/.*
+
+
+spark-*bin-hadoop*
+*.tgz
+
+# Object files
+tpch-dbgen/*.o
+tpch-dbgen/qgen
+tpchh-dbgen/dbgen
+
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
