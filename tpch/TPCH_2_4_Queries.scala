@@ -35,5 +35,5 @@ val experiment = tpch.runExperiment(
 experiment.waitForFinish(timeout)
 experiment.getCurrentResults.createOrReplaceTempView("result")
 val  results = spark.sql("select substring(name,1,100) as Name, bround((parsingTime+analysisTime+optimizationTime+planningTime+executionTime)/1000.0,1) as Runtime_sec  from result")
-results.coalesce(1).write.format("com.databricks.spark.csv").option("header", "true").save("./tpch_reports")
+results.coalesce(1).write.format("com.databricks.spark.csv").mode("overwrite").option("header", "true").save("./tpch_reports")
 sys.exit(0)
