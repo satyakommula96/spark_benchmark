@@ -1,6 +1,11 @@
 # TPC-H and TPC-DS performance benchmark for Spark with DeltaLake
 
-## Table of Contents :clipboard:
+<div align="center">
+	<img width="500" height="300" src="logo/spark_benchmark.png" alt="spark_benchmark">
+</div>
+
+## Table of Contents
+
 1. [Clone submodules](#1-clone-submodules)
 2. [Prerequisites](#2-prerequisites)
     - [Install Dependencies](#21-install-dependencies)
@@ -49,7 +54,8 @@ wget https://archive.apache.org/dist/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2
 mkdir spark3
 tar -xzf spark-3.2.0-bin-hadoop3.2.tgz --strip 1 -C spark3
 ```
-**NOTE:** Deploy spark in standalone cluster mode. 
+
+**NOTE:** Deploy spark in standalone cluster mode.
 
 ### 2.3 Download sbt launcher
 
@@ -57,7 +63,6 @@ tar -xzf spark-3.2.0-bin-hadoop3.2.tgz --strip 1 -C spark3
 wget -P /tmp https://github.com/sbt/sbt/releases/download/v0.13.18/sbt-0.13.18.tgz
 tar -xf /tmp/sbt-0.13.18.tgz  -C /tmp
 ```
-
 
 ## 3. Build
 
@@ -76,6 +81,7 @@ sbt +package
 cd ../tpcds-kit/tools
 make OS=LINUX
 ```
+
 ### 3.3 tpch-dbgen
 
 ```bash
@@ -83,6 +89,7 @@ cd ../../tpch-dbgen
 git checkout 0469309147b42abac8857fa61b4cf69a6d3128a8 -- bm_utils.c
 make
 ```
+
 **NOTE:** This should be installed on all cluster nodes with the same location and build `tpcds-kit`, `tpch-dbgen`
 
 ## 4. Performance Benchmarking
@@ -92,6 +99,7 @@ make
 ### 4.1 TPCH
 
 #### 4.1.1 Parquet
+
 ```bash
 cd ../tpch
 #For generating ~100GB parquet data
@@ -99,7 +107,9 @@ cd ../tpch
 # For runing all 22 TPC-H Queries
 ./runtpch_parquet.sh
 ```
+
 #### 4.1.2 ORC
+
 ```bash
 cd ../tpch
 #For generating ~100GB orc data
@@ -107,7 +117,9 @@ cd ../tpch
 # For runing all 22 TPC-H Queries
 ./runtpch_orc.sh
 ```
+
 #### 4.1.3 CSV
+
 ```bash
 cd ../tpch
 #For generating ~100GB csv data
@@ -116,10 +128,10 @@ cd ../tpch
 ./runtpch_csv.sh
 ```
 
-
 ### 4.2 TPCDS
 
 #### 4.2.1 Parquet
+
 ```bash
 cd ../tpcds
 #For generating ~100GB parquet data
@@ -127,7 +139,9 @@ cd ../tpcds
 # For runing all 99 TPC-DS Queries
 ./runtpch_parquet.sh
 ```
+
 #### 4.2.2 ORC
+
 ```bash
 cd ../tpcds
 #For generating ~100GB orc data
@@ -135,7 +149,9 @@ cd ../tpcds
 # For runing all 99 TPC-DS Queries
 ./runtpch_orc.sh
 ```
+
 #### 4.2.3 CSV
+
 ```bash
 cd ../tpcds
 #For generating ~100GB csv data
@@ -147,12 +163,14 @@ cd ../tpcds
 ## 5. Reports
 
 ### 5.1 TPCH reports
+
 ```bash
 cd tpch/tpch_<parquet,orc,csv>_reports
 # result will be present in part*.csv file
 ```
 
 ### 5.2 TPCDS reports
+
 ```bash
 cd tpcds/tpcds_<parquet,orc,csv>_reports
 # result will be present in part*.csv file
