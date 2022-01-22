@@ -94,7 +94,7 @@ make
 
 ## 4. Performance Benchmarking
 
-**NOTE:** Change `executor-memory` , `num-executors`,`executor-cores` a/c to your machine specifications in `.sh` files.
+**NOTE:** Change `master-ip` `executor-memory` , `num-executors`,`executor-cores` a/c to your machine specifications in `.sh` files.
 
 ### 4.1 TPCH
 
