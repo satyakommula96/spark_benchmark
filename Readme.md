@@ -1,5 +1,7 @@
 # TPC-H and TPC-DS performance benchmark for Spark with DeltaLake
 
+Based on: [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](http://www.vldb.org/pvldb/vol13/p3411-armbrust.pdf)
+
 <div align="center">
 	<img width="500" height="300" src="logo/spark_benchmark.png" alt="spark_benchmark">
 </div>
@@ -20,10 +22,12 @@
         - [Parquet](#411-parquet)
         - [ORC](#412-orc)
         - [CSV](#413-csv)
+        - [JSON](#414-json)
     - [TPCDS](#42-tpcds)
         - [Parquet](#421-parquet)
         - [ORC](#422-orc)
         - [CSV](#423-csv)
+        - [JSON](#424-json)
 5. [Reports](#5-reports)
     - [TPCH Report](#51-tpch-reports)
     - [TPCDS Report](#52-tpcds-reports)
@@ -128,6 +132,16 @@ cd ../tpch
 ./runtpch_csv.sh
 ```
 
+#### 4.1.4 JSON
+
+```bash
+cd ../tpch
+#For generating ~100GB csv data
+./gendata_json.sh
+# For runing all 22 TPC-H Queries
+./runtpch_son.sh
+```
+
 ### 4.2 TPCDS
 
 #### 4.2.1 Parquet
@@ -160,6 +174,15 @@ cd ../tpcds
 ./runtpch_csv.sh
 ```
 
+#### 4.2.4 JSON
+
+```bash
+cd ../tpcds
+#For generating ~100GB csv data
+./gendata_json.sh
+# For runing all 99 TPC-DS Queries
+./runtpch_json.sh
+
 ## 5. Reports
 
 ### 5.1 TPCH reports
@@ -172,6 +195,6 @@ cd tpch/tpch_<parquet,orc,csv>_reports
 ### 5.2 TPCDS reports
 
 ```bash
-cd tpcds/tpcds_<parquet,orc,csv>_reports
+cd tpcds/tpcds_<parquet,orc,csv,json>_reports
 # result will be present in part*.csv file
 ```
