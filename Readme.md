@@ -83,7 +83,7 @@ sbt +package
 
 ```bash
 cd ../tpcds-kit/tools
-make OS=LINUX
+make CC=gcc-9 OS=LINUX
 ```
 
 ### 3.3 tpch-dbgen
